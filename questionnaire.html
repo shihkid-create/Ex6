@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>問卷表單 - 數位學習與工具使用調查</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+  <!-- 導覽列：同步更新，包含問卷表單連結 -->
+  <div class="w3-bar w3-black">
+    <a href="index.html" class="w3-bar-item w3-button">首頁</a>
+    <a href="aboutme.html" class="w3-bar-item w3-button">關於我</a>
+    <a href="questionnaire.html" class="w3-bar-item w3-button w3-dark-grey">問卷表單</a>
+  </div>
+
+  <div class="w3-container w3-content w3-padding-16" style="max-width:800px;">
+    
+    <!-- 將所有表單欄位框起來 -->
+    <form class="w3-container w3-card-4 w3-light-grey w3-padding-16 w3-round-large">
+      <fieldset class="w3-round" style="border: 2px solid #009688; padding: 20px;">
+        <legend class="w3-large w3-text-teal" style="padding: 0 10px; font-weight: bold;">
+          大學生數位工具與學習習慣調查問卷
+        </legend>
+
+        <!-- 1. 是非題：checkbox -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>1. 是非題：</b>您目前是否有使用雲端協作平台（如 GitHub 或 Google 試算表）完成團隊專題？</label>
+          <p class="w3-small w3-text-gray">說明：若平常有使用請勾選「是」。</p>
+          <input class="w3-check" type="checkbox" id="q1" name="q1" value="yes">
+          <label for="q1"> 是，我有使用雲端協作平台參與專題</label>
+        </div>
+
+        <!-- 2. 單選題：radio -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>2. 單選題：</b>在進行網頁或程式撰寫時，您最主要的作業系統環境為何？</label>
+          <p class="w3-small w3-text-gray">說明：請選擇您最常使用的一項系統環境。</p>
+          <p>
+            <input class="w3-radio" type="radio" name="q2" value="Windows" id="q2_1" checked>
+            <label for="q2_1">Windows</label><br>
+            <input class="w3-radio" type="radio" name="q2" value="macOS" id="q2_2">
+            <label for="q2_2">macOS</label><br>
+            <input class="w3-radio" type="radio" name="q2" value="Linux" id="q2_3">
+            <label for="q2_3">Linux / 其他</label>
+          </p>
+        </div>
+
+        <!-- 3. 單選題：select -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>3. 單選題：</b>您平均每天花費多少時間瀏覽網路購物或電子商務平台？</label>
+          <p class="w3-small w3-text-gray">說明：請點擊下拉選單選擇最符合的時數區間。</p>
+          <select class="w3-select w3-border w3-round" name="q3">
+            <option value="" disabled selected>-- 請選擇每日瀏覽時數 --</option>
+            <option value="1">1 小時以下</option>
+            <option value="2">1 - 2 小時</option>
+            <option value="3">2 - 4 小時</option>
+            <option value="4">4 小時以上</option>
+          </select>
+        </div>
+
+        <!-- 4. 複選題：checkbox -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>4. 複選題：</b>當您在網頁開發遇到技術難題時，會使用哪些管道尋求解答？</label>
+          <p class="w3-small w3-text-gray">說明：可選擇多個符合的管道。</p>
+          <p>
+            <input class="w3-check" type="checkbox" name="q4" value="w3schools" id="q4_1">
+            <label for="q4_1">W3Schools 技術文件</label><br>
+            <input class="w3-check" type="checkbox" name="q4" value="stackoverflow" id="q4_2">
+            <label for="q4_2">Stack Overflow / 開發者論壇</label><br>
+            <input class="w3-check" type="checkbox" name="q4" value="ai" id="q4_3">
+            <label for="q4_3">AI 對話輔助工具 (ChatGPT 等)</label><br>
+            <input class="w3-check" type="checkbox" name="q4" value="classmates" id="q4_4">
+            <label for="q4_4">與同學或老師討論</label>
+          </p>
+        </div>
+
+        <!-- 5. 複選題：select -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>5. 複選題：</b>您對電子商務領域中的哪些專題方向較感興趣？</label>
+          <p class="w3-small w3-text-gray">說明：按住 Ctrl 鍵（Mac 請按 Command 鍵）可挑選多個選項。</p>
+          <select class="w3-select w3-border w3-round" name="q5" multiple size="4">
+            <option value="web">響應式前端網頁設計 (HTML/CSS)</option>
+            <option value="db">後端與資料庫應用系統 (MySQL/SQL)</option>
+            <option value="analytics">數據分析與顧客行為研究 (GA4)</option>
+            <option value="marketing">社群行銷與數位廣告投放</option>
+          </select>
+        </div>
+
+        <!-- 6. 填充題：text -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>6. 填充題：</b>請填寫您的姓名與學號</label>
+          <p class="w3-small w3-text-gray">說明：請輸入一般單行文字。</p>
+          <input class="w3-input w3-border w3-round" type="text" name="q6" placeholder="例如：4B255002 施宇哲">
+        </div>
+
+        <!-- 7. 填充題：number -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>7. 填充題：</b>您本學期預計自學網頁與程式設計的總時數目標（小時）</label>
+          <p class="w3-small w3-text-gray">說明：限定輸入阿拉伯數字。</p>
+          <input class="w3-input w3-border w3-round" type="number" name="q7" min="0" max="500" placeholder="例如：50">
+        </div>
+
+        <!-- 8. 填充題：date -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>8. 填充題：</b>您預計完成本份問卷與網頁作業的日期</label>
+          <p class="w3-small w3-text-gray">說明：請利用日期選擇元件挑選日期。</p>
+          <input class="w3-input w3-border w3-round" type="date" name="q8">
+        </div>
+
+        <!-- 9. 問答題：textarea -->
+        <div class="w3-margin-bottom">
+          <label class="w3-text-teal"><b>9. 問答題：</b>您對於本學期網頁設計與資料庫系統課程整合學習有何心得或建言？</label>
+          <p class="w3-small w3-text-gray">說明：請輸入多行文字內容（欄位高度固定為 3 列以上）。</p>
+          <textarea class="w3-input w3-border w3-round" name="q9" rows="3" placeholder="請在此填寫您的想法與建議..."></textarea>
+        </div>
+
+        <!-- 按鈕區：包含 [送出] 與 [清除/重設] 按鈕 (使用 button 標籤) -->
+        <div class="w3-center w3-margin-top">
+          <button type="submit" class="w3-btn w3-teal w3-round-large w3-margin-right">送出表單</button>
+          <button type="reset" class="w3-btn w3-red w3-round-large">清除重設</button>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+</body>
+</html>
